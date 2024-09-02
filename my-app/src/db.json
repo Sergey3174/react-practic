@@ -5,7 +5,7 @@
 			"login": "sergey",
 			"password": "qwerty123",
 			"register_at": "2050-09-25",
-			"role_id": "123"
+			"role_id": 0
 		}
 	],
 	"roles": [
