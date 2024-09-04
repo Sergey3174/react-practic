@@ -4,32 +4,25 @@
       "id": "001",
       "login": "sergey",
       "password": "qwerty123",
-      "register_at": "2050-09-25",
+      "registered_at": "2050-09-25",
       "role_id": 0
-    },
-    {
-      "id": "7828",
-      "login": "Ivan",
-      "password": "qwerty123",
-      "register_at": "2041-02-18 09:16",
-      "role_id": 2
     }
   ],
   "roles": [
     {
-      "id": "0",
+      "id": 0,
       "name": "Администратор"
     },
     {
-      "id": "1",
+      "id": 1,
       "name": "Модератор"
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Читатель"
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "Гость"
     }
   ],
