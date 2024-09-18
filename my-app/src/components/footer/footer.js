@@ -7,19 +7,19 @@ const FooterContainer = ({ className }) => {
 	const [weather, setWeather] = useState('');
 
 	useEffect(() => {
-		fetch(
-			'https://api.openweathermap.org/data/2.5/weather?q=Belgorod&lang=ru&units=metric&appid=9bbacc590140a35aaeac45ecadfae7e3',
-		)
-			.then((res) => res.json())
-			.then(({ name, main, weather }) => {
-				setCity(name);
-				setTemperature(Math.round(main.temp));
-				setWeather(weather[0].description);
-			});
+		// fetch(
+		// 	'https://api.openweathermap.org/data/2.5/weather?q=Belgorod&lang=ru&units=metric&appid=9bbacc590140a35aaeac45ecadfae7e3',
+		// )
+		// 	.then((res) => res.json())
+		// 	.then(({ name, main, weather }) => {
+		// 		setCity(name);
+		// 		setTemperature(Math.round(main.temp));
+		// 		setWeather(weather[0].description);
+		// 	});
 
-		// setCity('Белгород');
-		// setTemperature(Math.round(25.18));
-		// setWeather('ясно');
+		setCity('Белгород');
+		setTemperature(Math.round(25.18));
+		setWeather('ясно');
 	}, []);
 
 	return (
