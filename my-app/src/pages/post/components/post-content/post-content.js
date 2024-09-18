@@ -7,12 +7,14 @@ const PostContentContainer = ({
 	className,
 	post: { id, title, imageUrl, content, publishedAt },
 }) => {
+	console.log(imageUrl);
 	const navigate = useNavigate();
 	return (
 		<div className={className}>
 			<img src={imageUrl} alt={title} />
 			<H2>{title}</H2>
 			<SpecialPanel
+				id={id}
 				publishedAt={publishedAt}
 				margin="-20px 0 20px"
 				editButton={
