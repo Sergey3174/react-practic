@@ -6,7 +6,6 @@ import { useMatch, useParams } from 'react-router-dom';
 import { useServerRequest } from '../../hooks';
 import { loadPostAsync, RESET_POST_DATA } from '../../actions';
 import { selectPost } from '../../selectors';
-import { initialPostState } from '../../reducers/post-reducer';
 
 const PostContainer = ({ className }) => {
 	const post = useSelector(selectPost);
@@ -27,7 +26,6 @@ const PostContainer = ({ className }) => {
 		dispatch(loadPostAsync(requestServer, params.id));
 	}, [requestServer, dispatch, params.id, isCreating]);
 
-	console.log(post);
 	return (
 		<div className={className}>
 			{isEditing || isCreating ? (
