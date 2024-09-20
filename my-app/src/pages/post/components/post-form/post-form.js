@@ -21,7 +21,7 @@ const PostFormContainer = ({
 	const requestServer = useServerRequest();
 
 	useLayoutEffect(() => {
-		setImageUrlValue(title);
+		setImageUrlValue(imageUrl);
 		setTitleValue(title);
 	}, [imageUrl, title]);
 

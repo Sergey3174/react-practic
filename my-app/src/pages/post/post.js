@@ -14,7 +14,7 @@ const PostContainer = ({ className }) => {
 	const isCreating = useMatch('/post');
 	const isEditing = useMatch('/post/:id/edit');
 	const requestServer = useServerRequest();
-
+	console.log(post);
 	useLayoutEffect(() => {
 		dispatch(RESET_POST_DATA);
 	}, [dispatch, isCreating]);
