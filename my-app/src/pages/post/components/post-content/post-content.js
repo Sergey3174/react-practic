@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { H2, Icon } from '../../../../components';
 import { SpecialPanel } from '../special-panel/special-panel';
 import { useNavigate } from 'react-router-dom';
+import { PROP_TYPE } from '../../../../constans';
 
 const PostContentContainer = ({
 	className,
@@ -34,6 +35,8 @@ export const PostContent = styled(PostContentContainer)`
 	& img {
 		float: left;
 		margin: 0 20px 10px 0;
+		width: 280px;
+		height: 150px;
 	}
 
 	& .post-text {
@@ -41,3 +44,7 @@ export const PostContent = styled(PostContentContainer)`
 		white-space: pre-line;
 	}
 `;
+
+PostContent.propTypes = {
+	post: PROP_TYPE.POST.isRequired,
+};

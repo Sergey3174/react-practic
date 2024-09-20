@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Button } from '../../../../components';
+import PropTypes from 'prop-types';
 
 const PaginationContainer = ({ className, setPage, page, lastPage }) => {
 	return (
@@ -45,3 +46,9 @@ export const Pagination = styled(PaginationContainer)`
 		margin: 0px 5px;
 	}
 `;
+
+Pagination.propTypes = {
+	page: PropTypes.number.isRequired,
+	lastPage: PropTypes.number.isRequired,
+	setPage: PropTypes.func.isRequired,
+};
