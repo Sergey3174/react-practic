@@ -5,31 +5,31 @@
       "login": "sergey",
       "password": "qwerty123",
       "registered_at": "2050-09-25",
-      "role_id": 0
+      "role_id": "0"
     },
     {
       "id": "724c",
       "login": "ivan",
       "password": "qwerty123",
       "registered_at": "2035-01-24 16:01",
-      "role_id": 1
+      "role_id": "0"
     }
   ],
   "roles": [
     {
-      "id": 0,
+      "id": "0",
       "name": "Администратор"
     },
     {
-      "id": 1,
+      "id": "1",
       "name": "Модератор"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Читатель"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Гость"
     }
   ],
@@ -140,18 +140,25 @@
       "post_id": "003",
       "published_at": "2054-09-05 05:33",
       "content": "Комментарий"
+    },
+    {
+      "id": "16a6",
+      "author_id": "001",
+      "post_id": "001",
+      "published_at": "2057-03-18 04:26",
+      "content": "Комментарий 3\n"
     }
   ],
   "sessions": [
     {
-      "id": "e93e",
-      "hash": "0.79051535202849687600235029094619676470756530761719",
+      "id": "6d7a",
+      "hash": "0.26053866262433422740230071212863549590110778808594",
       "user": {
-        "id": "724c",
-        "login": "ivan",
+        "id": "001",
+        "login": "sergey",
         "password": "qwerty123",
-        "registeredAt": "2035-01-24 16:01",
-        "roleId": 1
+        "registeredAt": "2050-09-25",
+        "roleId": "0"
       }
     }
   ]
