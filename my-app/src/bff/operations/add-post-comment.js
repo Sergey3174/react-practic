@@ -5,9 +5,9 @@ import { commentsWithAuthor } from '../utils';
 
 export const addPostComment = async (hash, userId, postId, content) => {
 	const accessRoles = [ROLE.ADMIN, ROLE.MODERATOR, ROLE.READER];
-	console.log(hash);
+
 	const access = await sessions.access(hash, accessRoles);
-	console.log(access);
+
 	if (!access) {
 		return {
 			error: 'Доступ запрещен',

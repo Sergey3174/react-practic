@@ -8,7 +8,7 @@ const FooterContainer = ({ className }) => {
 
 	useEffect(() => {
 		// fetch(
-		// 	'https://api.openweathermap.org/data/2.5/weather?q=Belgorod&lang=ru&units=metric&appid=9bbacc590140a35aaeac45ecadfae7e3',
+		// 	'https://api.openweathermap.org/data/2.5/weather?q=Belgorod&lang=ru&units=metric&appid=81657edbd6844491d3e0746b5b118a0c',
 		// )
 		// 	.then((res) => res.json())
 		// 	.then(({ name, main, weather }) => {

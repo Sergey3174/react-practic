@@ -11,12 +11,12 @@ const UserRowContainer = ({
 	id,
 	login,
 	registeredAt,
-	roleId,
+	roleId: userRole,
 	roles,
 	onUserRemove,
 }) => {
-	const [initialRoleId, setInitialRoleId] = useState(roleId);
-	const [selectedRoleId, setSelectedRoleId] = useState(roleId);
+	const [initialRoleId, setInitialRoleId] = useState(userRole);
+	const [selectedRoleId, setSelectedRoleId] = useState(userRole);
 
 	const requestServer = useServerRequest();
 
