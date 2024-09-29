@@ -149,17 +149,5 @@
       "content": "Комментарий 3\n"
     }
   ],
-  "sessions": [
-    {
-      "id": "6d7a",
-      "hash": "0.26053866262433422740230071212863549590110778808594",
-      "user": {
-        "id": "001",
-        "login": "sergey",
-        "password": "qwerty123",
-        "registeredAt": "2050-09-25",
-        "roleId": "0"
-      }
-    }
-  ]
+  "sessions": []
 }

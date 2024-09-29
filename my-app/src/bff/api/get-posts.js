@@ -4,16 +4,20 @@ export const getPosts = (searchPhrase, page, limit) => {
 		return fetch(`http://localhost:3005/posts`)
 			.then((data) => data.json())
 			.then((data) => {
-				const posts = data.filter(({ title }) =>
-					title.toLowerCase().includes(searchPhrase.toLowerCase()),
+				const posts = data.filter(
+					({ title }, index) =>
+						title.toLowerCase().includes(searchPhrase.toLowerCase()) &&
+						Math.ceil((index + 1) / limit) === page,
 				);
-				const last = Math.ceil(posts.length / limit);
+				const last = Math.ceil(data.length / limit);
+
 				return {
 					posts: posts && posts.map(transformPost),
 					last,
 				};
 			});
 	}
+
 	return fetch(`http://localhost:3005/posts?_page=${page}&_per_page=${limit}`)
 		.then((data) => data.json())
 		.then(({ data, last }) => {
