@@ -4,13 +4,13 @@ export const getPosts = (searchPhrase, page, limit) => {
 		return fetch(`http://localhost:3005/posts`)
 			.then((data) => data.json())
 			.then((data) => {
-				const posts = data.filter(
-					({ title }, index) =>
-						title.toLowerCase().includes(searchPhrase.toLowerCase()) &&
-						Math.ceil((index + 1) / limit) === page,
+				const postsIncludes = data.filter(({ title }) =>
+					title.toLowerCase().includes(searchPhrase.toLowerCase()),
 				);
-				const last = Math.ceil(data.length / limit);
-
+				const last = Math.ceil(postsIncludes.length / limit);
+				const posts = postsIncludes.filter(
+					(_, index) => Math.ceil((index + 1) / limit) === page,
+				);
 				return {
 					posts: posts && posts.map(transformPost),
 					last,
